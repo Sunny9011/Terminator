@@ -11,4 +11,13 @@ class junior
         return $this->jun;
     }
 
+    public function getWorkJun()
+    {
+        if ($this->jun == 0) {
+            return -1;
+        } else {
+            return 1;
+        }
+    }
+
 }

@@ -3,11 +3,18 @@ require_once __DIR__ . '/autoload.php';
 
 class work
 {
-    public function getStateLead()
+    protected $teamLead;
+    protected $listener;
+
+    public function __construct(Teamlead $teamLead)
     {
-        $test = new teamLead();
-        return $test->getMoodTeamLead();
+        $this->teamLead = $teamLead;
+        $this->listener = new Listener(['calss t100', 'class t101']);
+    }
+
+    public function execute()
+    {
+        $mood = $this->teamlead->getMoodLead();
+        $this->listener->sendMood($mood);
     }
 }
-$wew = new work();
-print_r($wew->getStateLead());
