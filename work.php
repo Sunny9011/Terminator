@@ -9,7 +9,7 @@ class work
     public function __construct(Teamlead $teamLead)
     {
         $this->teamLead = $teamLead;
-        $this->listener = new Listener(['calss t100', 'class t101']);
+        $this->listener = new Listener(['class t100', 'class t101']);
     }
 
     public function execute()
