@@ -1,16 +1,13 @@
 <?php
-
-class teamLead
+require_once __DIR__ . '/autoload.php';
+class TeamLead
 {
     protected $moodLead;
     protected $state = [
-        ['state1' => 'he state "do not fall for eyes', 'phrase1' => 'RUN jun'],
-        ['state2' => 'Bad mood'],
-        ['phrase2' => 'Go away!'],
-        ['state3' => 'Normal mood'],
-        ['phrase3' => 'Normal junior'],
-        ['state4' => 'Good mood'],
-        ['phrase4' => 'Good boy junior'],
+        ['state1' => 'He state "do not fall for eyes"', 'phrase1' => 'RUN jun'],
+        ['state2' => 'Bad mood', 'phrase2' => 'Go away!'],
+        ['state3' => 'Normal mood', 'phrase3' => 'Normal junior'],
+        ['state4' => 'Good mood', 'phrase4' => 'Good boy junior'],
     ];
 
     public function __construct()
@@ -20,13 +17,11 @@ class teamLead
 
     public function getLeadState()
     {
-        $stateId = $this->getMoodLead();
-        return $this->state[$stateId];
+        return $this->state;
     }
-
     public function getMoodLead()
     {
-        return ($this->lead + $this->getWorkJun() < count($this->state)) ? $this->lead +
-            $this->getWorkJun() : count($this->state) - 1;
+
     }
+
 }
