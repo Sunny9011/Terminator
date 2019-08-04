@@ -1,27 +1,42 @@
 <?php
 require_once __DIR__ . '/autoload.php';
+
 class TeamLead
 {
     protected $moodLead;
-    protected $state = [
-        ['state1' => 'He state "do not fall for eyes"', 'phrase1' => 'RUN jun'],
-        ['state2' => 'Bad mood', 'phrase2' => 'Go away!'],
-        ['state3' => 'Normal mood', 'phrase3' => 'Normal junior'],
-        ['state4' => 'Good mood', 'phrase4' => 'Good boy junior'],
+    protected $state = ['He state "do not fall for eyes"',
+        'Bad mood',
+        'Normal mood',
+        'Good mood',
     ];
+    protected $currentState;
 
-    public function __construct()
+    public function __construct( int $currentState)
     {
-        $this->moodLead = mt_rand(0, 3);
+        $this->currentState = $currentState;
+//        $this->moodLead = $this->state[$this->stateNow];
     }
 
-    public function getLeadState()
-    {
-        return $this->state;
-    }
     public function getMoodLead()
     {
-
+        return $this->currentState;
     }
 
+    public function setStateLead()
+    {
+        $junior = new Junior(0);
+        $getStateJun = $junior->getWorkJun();
+        print_r($getStateJun);
+        $this->stateNow = $getStateJun ? $this->increaseCurrentState() : $this->decreaseCurrentState();
+
+        return $this->state[$this->currentState];
+    }
+
+    public function increaseCurrentState () {
+        return $this->currentState + 1 >= count($this->state) ? $this->currentState : ++$this->currentState;
+    }
+
+    public function decreaseCurrentState () {
+        return $this->currentState ? --$this->currentState : $this->currentState;
+    }
 }

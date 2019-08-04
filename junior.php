@@ -1,19 +1,18 @@
 <?php
 
-class junior
+class Junior
 {
     protected $jun;
 
-    public function __construct()
+    public function __construct(int $setStateJun)
     {
-        $this->jun = mt_rand(0, 1);
-        return $this->jun;
+        $this->jun = $setStateJun;
     }
 
     public function getWorkJun()
     {
-        if ($this->jun == 0) {
-            return -1;
+        if ($this->jun === 0) {
+            return 0;
         } else {
             return 1;
         }
