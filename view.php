@@ -18,11 +18,10 @@
     $objJun = new Junior();
     $objList = new Listener();
     ?>
-    <p> Настроение было: <?php  print_r($objLead->getMoodLead()); ?></p>
-    <p> Состояние джуна: <?php  print_r($objJun->getWorkJun()); ?></p>
-    <p> Настроение стало: <?php  print_r($objLead->setStateLead()); ?></p>
-    <p> Что сказал Лид: <?php  print_r($objLead->getEmotionsLead()); ?></p>
-    <p> Менеджер смотрит: <?php  print_r($objList->setStateCounting()); ?></p>
+    <p> The mood was: <?php  print_r($objLead->getMoodLead()); ?></p>
+    <p> Jun State: <?php  print_r($objJun->getWorkJun()); ?></p>
+    <p> The mood has become: <?php  print_r($objLead->setStateLead()); ?></p>
+    <p> What did Lead say: <?php  print_r($objLead->getEmotionsLead()); ?></p>
 
 </div>
 </form>

@@ -10,12 +10,24 @@
 <body>
 
 <form action="view.php" method="post">
-    настроение лида:
+    Input number Lead mood :
     <input name="stateLead">
     <br>
-    состояния джуна: <input name="stateJun">
+    Input number Jun state: <input name="stateJun">
     <br>
-    <button name="go">Посмотреть</button>
+    <button name="go">GO</button>
+    <p>
+        Lead Mood:
+        <br>
+        0 => 'He state "do not fall for eyes"',
+        <br>
+        1 => 'Bad mood',
+        <br>
+        2 => 'Normal mood',
+        <br>
+        3 => 'Good mood'
+    </p>
+    <p> Jun State: <br> 0 => Does not work <br> 1 => He work! </p>
 
 
 </form>

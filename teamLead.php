@@ -41,7 +41,6 @@ class TeamLead
         $getStateJun = $junior->getWorkJun();
         $this->currentMood = $getStateJun ? $this->moodImprovement() : $this->moodDecline();
         return $this->emotionsLead[$this->currentMood];
-
     }
 
     public function increaseCurrentState()
