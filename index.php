@@ -1,22 +1,25 @@
-<?php
-require_once __DIR__ . '/autoload.php';
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
 
-//class index
-//{
-//    protected $teamLead;
-//
-//    public function __construct()
-//    {
-//        $this->teamLead = new TeamLead();
-//    }
-//    public function execute()
-//    {
-//       return $this->teamLead->getLeadState();
-//    }
-//}
-$tester = new TeamLead(3);
-print_r('mood: ' . $tester->getMoodLead());
-print_r(' State: ' . $tester->setStateLead());
-//$tester->setStateLead();
-//$test = new index();
-//print_r($test->execute());
+<form action="view.php" method="post">
+    настроение лида:
+    <input name="stateLead">
+    <br>
+    состояния джуна: <input name="stateJun">
+    <br>
+    <button name="go">Посмотреть</button>
+
+
+</form>
+</body>
+</html>
+
+

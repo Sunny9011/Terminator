@@ -4,9 +4,9 @@ class Junior
 {
     protected $jun;
 
-    public function __construct(int $setStateJun)
+    public function __construct()
     {
-        $this->jun = $setStateJun;
+        $this->jun = (int)$_POST['stateJun'];
     }
 
     public function getWorkJun()

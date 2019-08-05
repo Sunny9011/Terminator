@@ -1,18 +1,20 @@
 <?php
+require_once __DIR__ . '/autoload.php';
 
 class Listener
 {
-    public $listeners = [];
+    protected $getArrayMood;
 
-    public function __construct($t1000, $t1001, $listener)
+    public function __construct()
     {
-        $this->listeners = $listener;
+
     }
 
-    public function sendMood($mood)
+    public function setStateCounting()
     {
-        foreach ($this->listeners as $listener) {
-            $listener->setMood($mood);
-        }
+        $this->getArrayMood = new TeamLead();
+        $array [] = array(array($this->getArrayMood->setStateLead() => +1));
+        return $array;
     }
+
 }
